@@ -1,0 +1,20 @@
+<h3>Таблица с результатами</h3>
+Введенное диапазон: [0, <%= @number %>]
+<table class = "tab">
+    <tr>
+    <th>Индекс</th>
+    <th>Число</th>
+    <th>Квадрат числа</th>
+    </tr>
+    <% i = 0 %>
+    <% @res_arr.each do |res|%>
+    <tr>
+        <td><%= i + 1 %></td>
+        <td><%= res %></td>
+        <td><%= (2**res)- 1 %></td>
+    </tr>
+     <% i = i + 1 %>
+    <% end%>
+</table>
+Количество таких чисел
+<p id="counter"><%= @res_arr.size %></p>
